@@ -1,0 +1,105 @@
+html,
+body,
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin: 30px;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.monitor {
+  width: 30vw;
+  height: 17vw;
+}
+
+.monitor .outer {
+  width: 30vw;
+  height: 17vw;
+  background-color: black;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.monitor .screen {
+  width: 28vw;
+  height: 15vw;
+  background-color: rgb(32, 32, 32);
+  border-radius: 2px;
+  transition-delay: 2500ms;
+}
+.monitor .load {
+  width: 0;
+  height: 0;
+  transition: 1000ms;
+}
+
+.monitor .on {
+  background-color: white;
+  width: 0;
+  height: 0;
+  transition: 100ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.monitor .bar {
+  width: 0;
+  height: 100%;
+  background-color: blue;
+  transition: 2500ms;
+}
+.monitor .collapse {
+  width: 100%;
+  height: 100%;
+  transition-delay: 2500ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.monitor:hover .on {
+  width: 100%;
+  height: 100%;
+}
+
+.monitor:hover .load {
+  display: block;
+  width: 33%;
+  height: 5%;
+  border: 1px solid black;
+}
+
+.monitor:hover .bar {
+  width: 100%;
+}
+
+.monitor:hover .collapse {
+  width: 0;
+  height: 0;
+}
+
+.monitor:hover .screen {
+  position: relative;
+  background-color: red;
+}
+
+.monitor .stand {
+  width: 3vw;
+  height: 4vw;
+  background-color: black;
+  margin: auto;
+}
+.monitor .base {
+  width: 6vw;
+  height: 1vw;
+  margin: auto;
+  background-color: black;
+}
